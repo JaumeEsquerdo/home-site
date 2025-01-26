@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home de una página de un lugar para visitar</title>
-    
+
     <link rel="stylesheet" href="css/styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900"
+        rel="stylesheet">
     <script src="js/index.js" defer></script>
 </head>
+
 <body class="Body">
     <header class="Header">
         <nav class="Header-nav">
@@ -18,6 +23,7 @@
                 <li class="Header-li">EVENTS</li>
             </ul>
         </nav>
+        <button class="BtnLayout">X</button>
     </header>
 
     <main class="Main">
@@ -27,6 +33,38 @@
         </picture>
         <a class="Main-h2" href="#">DIVE IN</a>
     </main>
-    
+
+    <script>
+        const h1 = document.querySelector(`.Main-h1`);
+        const img = document.querySelector('.Picture-img');
+        const button = document.querySelector('.BtnLayout');
+
+        const versions = [
+            { color: '#dbbb06', img: 'img/brasil.jpeg', text: 'Brasil' },
+            { color: '#00FF00', img: 'img/brasil2.jpeg', text:'Argentina' },
+            { color: '#0000FF', img: 'img/brasil3.jpeg', text:'Portugal'},
+        ];
+
+        let currentIndex = 0;
+
+        button.addEventListener('click', () => {
+            
+            
+            h1.style.color = versions[currentIndex].color;
+            img.src = versions[currentIndex].img;
+            h1.textContent = versions[currentIndex].text;
+            //el texto de antes se sobreescrie por eso no hace falta que se borre el anterior manualmente y que aparezca otro
+
+            currentIndex++;
+
+            if (currentIndex === versions.length) {
+                currentIndex = 0;
+            }
+            
+        });
+
+
+    </script>
 </body>
+
 </html>
