@@ -15,7 +15,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-color: rgb(247, 247, 228);
+    background-color: rgb(241, 241, 233);
 }
 
 .Header{
@@ -55,10 +55,10 @@
     position: absolute;
     top: 20%;
     left: 50%;
-    
+    aspect-ratio: 16/9;
     
     height: 600px;
-    width: 800px;
+    width: 900px;
     z-index: -1;
 }
 .Picture-img{
