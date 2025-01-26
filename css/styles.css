@@ -12,6 +12,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    background-image: url(/img/Fondo\ proyecto\ lugar\ \(2\).png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 .Header-ul{
     display: flex;
